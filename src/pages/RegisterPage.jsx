@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useMyContext } from "../context/MyContext";
 import { FiEye, FiEyeOff } from "react-icons/fi";
 import { registerAPI } from "../api";
+import { setAuthData } from "../api/utils/auth";
 import "./AuthPages.css";
 
 const RegisterPage = () => {
@@ -17,7 +18,7 @@ const RegisterPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [showPassword1, setShowPassword1] = useState(false);
   const [showPassword2, setShowPassword2] = useState(false);
-  const { setLoadingState, setErrorState } = useMyContext();
+  const { setLoadingState, setErrorState, updateUserProfile } = useMyContext();
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -86,21 +87,27 @@ const RegisterPage = () => {
 
     try {
       // Call the actual register API
-      const timestamp = await registerAPI({
+      const response = await registerAPI({
         name: formData.name,
         username: formData.username,
         email: formData.email,
         password: formData.password
       });
 
-      // Registration successful - redirect to dashboard
+      // Registration successful - auto-login the user
+      const userData = {
+        id: response, // Using response as user ID
+        name: formData.name,
+        username: formData.username,
+        email: formData.email,
+      };
+
+      setAuthData(tempToken, tempToken, userData);
+      updateUserProfile(userData);
       setErrorState(""); // Clear any previous errors
-      navigate("/dashboard", {
-        state: { 
-          message: "Registration successful! Please login with your credentials.",
-          email: formData.email 
-        }
-      });
+      
+      // Redirect to dashboard instead of login page
+      navigate("/dashboard");
     } catch (error) {
       setErrorState(error.message || "Registration failed. Please try again.");
     } finally {
