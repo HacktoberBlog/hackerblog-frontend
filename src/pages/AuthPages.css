@@ -169,3 +169,28 @@
     padding: 0.75rem 1rem;
   }
 }
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper .form-input {
+  width: 100%;              /* same width as email */
+  padding-right: 40px;      /* space for the eye icon */
+  box-sizing: border-box;   /* keep consistent sizing */
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #555; /* same color as input text/icon */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
