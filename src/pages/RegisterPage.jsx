@@ -2,11 +2,13 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useMyContext } from "../context/MyContext";
 import { FiEye, FiEyeOff } from "react-icons/fi";
+import { registerAPI } from "../api";
 import "./AuthPages.css";
 
 const RegisterPage = () => {
   const [formData, setFormData] = useState({
     name: "",
+    username: "",
     email: "",
     password: "",
     confirmPassword: "",
@@ -15,7 +17,7 @@ const RegisterPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [showPassword1, setShowPassword1] = useState(false);
   const [showPassword2, setShowPassword2] = useState(false);
-  const { updateUserProfile, setLoadingState, setErrorState } = useMyContext();
+  const { setLoadingState, setErrorState } = useMyContext();
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -40,6 +42,14 @@ const RegisterPage = () => {
       newErrors.name = "Full name is required";
     } else if (formData.name.trim().length < 2) {
       newErrors.name = "Name must be at least 2 characters";
+    }
+
+    if (!formData.username.trim()) {
+      newErrors.username = "Username is required";
+    } else if (formData.username.trim().length < 3) {
+      newErrors.username = "Username must be at least 3 characters";
+    } else if (!/^[a-zA-Z0-9_]+$/.test(formData.username)) {
+      newErrors.username = "Username can only contain letters, numbers, and underscores";
     }
 
     if (!formData.email.trim()) {
@@ -75,20 +85,24 @@ const RegisterPage = () => {
     setLoadingState(true);
 
     try {
-      // Simulate API call - replace with actual registration logic
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-
-      // Mock successful registration - replace with actual API response
-      const mockUser = {
-        id: Date.now(),
+      // Call the actual register API
+      const timestamp = await registerAPI({
         name: formData.name,
+        username: formData.username,
         email: formData.email,
-      };
+        password: formData.password
+      });
 
-      updateUserProfile(mockUser);
-      navigate("/dashboard");
+      // Registration successful - redirect to dashboard
+      setErrorState(""); // Clear any previous errors
+      navigate("/dashboard", {
+        state: { 
+          message: "Registration successful! Please login with your credentials.",
+          email: formData.email 
+        }
+      });
     } catch (error) {
-      setErrorState("Registration failed. Please try again.");
+      setErrorState(error.message || "Registration failed. Please try again.");
     } finally {
       setIsLoading(false);
       setLoadingState(false);
@@ -121,6 +135,25 @@ const RegisterPage = () => {
               />
               {errors.name && (
                 <span className="error-message">{errors.name}</span>
+              )}
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="username" className="form-label">
+                Username
+              </label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                value={formData.username}
+                onChange={handleChange}
+                className={`form-input ${errors.username ? "error" : ""}`}
+                placeholder="Choose a username"
+                disabled={isLoading}
+              />
+              {errors.username && (
+                <span className="error-message">{errors.username}</span>
               )}
             </div>
 
