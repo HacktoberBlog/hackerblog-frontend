@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useMyContext } from "../context/MyContext";
+import { FiEye, FiEyeOff } from "react-icons/fi";
 import "./AuthPages.css";
 
 const LoginPage = () => {
@@ -10,7 +11,7 @@ const LoginPage = () => {
   });
   const [errors, setErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
-
+  const [showPassword, setShowPassword] = useState(false);
   const { updateUserProfile, setLoadingState, setErrorState } = useMyContext();
   const navigate = useNavigate();
 
@@ -109,11 +110,12 @@ const LoginPage = () => {
             </div>
 
             <div className="form-group">
-              <label htmlFor="password" className="form-label">
-                Password
-              </label>
+            <label htmlFor="password" className="form-label">
+              Password
+            </label>
+            <div className="password-wrapper">
               <input
-                type="password"
+                type={showPassword ? "text" : "password"}
                 id="password"
                 name="password"
                 value={formData.password}
@@ -122,10 +124,19 @@ const LoginPage = () => {
                 placeholder="Enter your password"
                 disabled={isLoading}
               />
-              {errors.password && (
-                <span className="error-message">{errors.password}</span>
-              )}
+              <button
+                type="button"
+                onClick={() => setShowPassword((prev) => !prev)}
+                className="password-toggle"
+              >
+                {showPassword ? <FiEyeOff size={18} /> : <FiEye size={18} />}
+              </button>
             </div>
+            {errors.password && (
+              <span className="error-message">{errors.password}</span>
+            )}
+          </div>
+
 
             <button type="submit" disabled={isLoading} className="auth-button">
               {isLoading ? "Signing In..." : "Sign In"}
