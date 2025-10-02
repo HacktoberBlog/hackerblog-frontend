@@ -19,7 +19,7 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-section footer-brand">
             <h3 className="footer-title">
-              <FaCode className="footer-logo" />
+              <FaCode className="footer-logo" aria-hidden="true" focusable={false} />
               HackerBlog
             </h3>
             <p className="footer-description">
