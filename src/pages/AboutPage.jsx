@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 import {
   FiCode,
   FiZap,
@@ -10,7 +11,12 @@ import {
 } from "react-icons/fi";
 import Footer from "../components/Footer";
 
+//? Scroll to top on mount
 const AboutPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const features = [
     {
       icon: <FiTerminal />,
