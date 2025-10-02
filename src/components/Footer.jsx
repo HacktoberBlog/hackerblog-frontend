@@ -168,7 +168,7 @@ const Footer = () => {
         <div className="footer-bottom">
           <div className="footer-bottom-content">
             <p className="footer-copyright">
-              © 2025 HackerBlog. Made with <FaHeart className="heart-icon" /> by
+              © 2025 HackerBlog. Made with <FaHeart className="heart-icon" aria-hidden="true" focusable={false} /> by
               the developer community.
             </p>
             <div className="footer-tech">
