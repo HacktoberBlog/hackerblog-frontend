@@ -110,8 +110,8 @@ const RegisterPage = () => {
       updateUserProfile(userData);
       setErrorState(""); // Clear any previous errors
       
-      // Redirect to dashboard instead of login page
-      navigate("/dashboard");
+      // Force a full page reload to dashboard to bypass React state timing issues
+      window.location.replace('/dashboard');
     } catch (error) {
       setErrorState(error.message || "Registration failed. Please try again.");
     } finally {
