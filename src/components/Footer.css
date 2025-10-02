@@ -129,6 +129,11 @@
   animation: heartbeat 2s ease-in-out infinite;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .heart-icon {
+    animation: none;
+  }
+}
 @keyframes heartbeat {
   0%,
   50%,
