@@ -1,13 +1,11 @@
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./layout/Layout";
 import LandingPage from "./pages/LandingPage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import ProtectedRoute from "./routes/ProtectedRoute";
 import PublicRoute from "./routes/PublicRoute";
+import AboutPage from "./pages/AboutPage";
 
 // Placeholder component for dashboard
 const DashboardPage = () => (
@@ -25,6 +23,14 @@ const routes = createBrowserRouter([
     element: (
       <Layout>
         <LandingPage />
+      </Layout>
+    ),
+  },
+  {
+    path: "/about",
+    element: (
+      <Layout>
+        <AboutPage />
       </Layout>
     ),
   },
