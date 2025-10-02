@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useMyContext } from "../context/MyContext";
-import { Eye, EyeOff } from "lucide-react";
+import { FiEye, FiEyeOff } from "react-icons/fi";
 import "./AuthPages.css";
 
 const LoginPage = () => {
@@ -129,7 +129,7 @@ const LoginPage = () => {
                 onClick={() => setShowPassword((prev) => !prev)}
                 className="password-toggle"
               >
-                {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                {showPassword ? <FiEyeOff size={18} /> : <FiEye size={18} />}
               </button>
             </div>
             {errors.password && (
