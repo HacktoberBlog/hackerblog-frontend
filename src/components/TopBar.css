@@ -140,6 +140,7 @@
   }
 
   .topbar-nav {
+    display: none;
     position: absolute;
     top: 60px;
     right: 0;
@@ -150,12 +151,10 @@
     border-left: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
     width: 160px;
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
   }
 
   .topbar-nav.open {
-    transform: translateX(0);
+    display: flex;
   }
 
   .nav-auth {
