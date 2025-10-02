@@ -14,12 +14,16 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer font-google-code">
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-section footer-brand">
             <h3 className="footer-title">
-              <FaCode className="footer-logo" aria-hidden="true" focusable={false} />
+              <FaCode
+                className="footer-logo"
+                aria-hidden="true"
+                focusable={false}
+              />
               HackerBlog
             </h3>
             <p className="footer-description">
@@ -168,8 +172,13 @@ const Footer = () => {
         <div className="footer-bottom">
           <div className="footer-bottom-content">
             <p className="footer-copyright">
-              © 2025 HackerBlog. Made with <FaHeart className="heart-icon" aria-hidden="true" focusable={false} /> by
-              the developer community.
+              © 2025 HackerBlog. Made with{" "}
+              <FaHeart
+                className="heart-icon"
+                aria-hidden="true"
+                focusable={false}
+              />{" "}
+              by the developer community.
             </p>
             <div className="footer-tech">
               <span className="tech-badge">
