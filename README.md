@@ -136,10 +136,13 @@ We welcome contributors of all skill levels! HackerBlog is participating in **Ha
 ### 📋 How to Contribute
 
 1. **Fork the repository**
-2. **Create a feature branch**: `git checkout -b feature/amazing-feature`
-3. **Make your changes**: Follow our coding standards
-4. **Commit your changes**: `git commit -m 'Add amazing feature'`
-5. **Push to your fork**: `git push origin feature/amazing-feature`
+2. **Create a branch** depending on your contribution type:
+   - `feature/amazing-feature` → New feature
+   - `fix/bug-description` → Bug fixes
+   - `docs/documentation-update` → Documentation updates
+3. **Make your changes** following coding standards
+4. **Commit your changes**: `git commit -m 'type: description'`
+5. **Push to your fork**: `git push origin your-branch-name`
 6. **Open a Pull Request**
 
 ### 🏷 Issue Labels
