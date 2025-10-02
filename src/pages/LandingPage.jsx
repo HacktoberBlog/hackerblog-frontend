@@ -12,6 +12,7 @@ import {
   FaLeaf,
 } from "react-icons/fa";
 import { MdDashboard } from "react-icons/md";
+import Footer from "../components/Footer";
 import "./LandingPage.css";
 
 const LandingPage = () => {
@@ -249,6 +250,8 @@ const LandingPage = () => {
           )}
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };
