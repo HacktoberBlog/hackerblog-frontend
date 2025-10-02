@@ -4,7 +4,7 @@ import HeroAnimation from "../animations/HeroAnimation";
 import { useNavigate } from "react-router-dom";
 
 function Hero() {
-  const [userProfile] = useState(true);
+  const [userProfile] = useState(null);
 
   const containerVariants = {
     hidden: { opacity: 0 },
