@@ -41,10 +41,10 @@ function Community() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl py-2 font-bold mb-6 bg-white bg-clip-text text-transparent">
+          <h2 className="font-google-code text-4xl py-2 font-bold mb-6 bg-white bg-clip-text text-transparent">
             Join Our Growing Community ✨
           </h2>
-          <p className="text-slate-300 max-w-4xl mx-auto leading-relaxed">
+          <p className="font-google-code text-slate-300 max-w-4xl mx-auto leading-relaxed">
             Whether you're here to flex your latest project, learn from the
             pros...
           </p>
@@ -69,13 +69,13 @@ function Community() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <p className="text-xl text-slate-300 mb-6">
+            <p className="font-google-code text-xl text-slate-300 mb-6">
               Ready to level up your developer game? Let's go! 🎮
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-[rgb(160,160,255)] text-[rgb(28,28,64)] rounded-lg font-bold text-lg shadow-lg transition-all"
+              className="font-google-code px-8 py-4 bg-[rgb(160,160,255)] text-[rgb(28,28,64)] rounded-lg font-bold text-lg shadow-lg transition-all"
               onClick={()=>navigate("/register")}
             >
               Start Your Journey

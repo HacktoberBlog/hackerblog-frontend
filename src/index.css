@@ -1,1 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Code:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
 @import "tailwindcss";
+
+@theme {
+  --font-google-code: "Google Sans Code", monospace;
+  --font-press-start: "Press Start 2P", cursive;
+}
