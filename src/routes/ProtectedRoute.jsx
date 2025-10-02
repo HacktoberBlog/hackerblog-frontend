@@ -1,12 +1,12 @@
 import { Navigate } from "react-router-dom";
 import { useMyContext } from "../context/MyContext";
-import { isAuthenticated } from "../api";
 
 function ProtectedRoute({ children }) {
-  const { userProfile } = useMyContext();
-  
-  // Check both localStorage token and context user profile
-  if (!isAuthenticated() && !userProfile) {
+  const { userProfile, isAuthenticated } = useMyContext();
+
+  // Check if user is authenticated using context state
+  if (!userProfile || !isAuthenticated) {
+    console.log('ProtectedRoute - Redirecting to login');
     return <Navigate to="/login" replace />;
   }
 

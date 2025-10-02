@@ -18,7 +18,7 @@ const RegisterPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [showPassword1, setShowPassword1] = useState(false);
   const [showPassword2, setShowPassword2] = useState(false);
-  const { setLoadingState, setErrorState, updateUserProfile } = useMyContext();
+  const { setLoadingState, setErrorState, updateUserProfile, setAuthenticatedState } = useMyContext();
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -102,7 +102,11 @@ const RegisterPage = () => {
         email: formData.email,
       };
 
-      setAuthData(tempToken, tempToken, userData);
+
+      
+      // Set authentication state and user data
+      setAuthenticatedState(true);
+      localStorage.setItem('user', JSON.stringify(userData));
       updateUserProfile(userData);
       setErrorState(""); // Clear any previous errors
       
