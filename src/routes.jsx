@@ -51,11 +51,11 @@ const routes = createBrowserRouter([
   {
     path: "/dashboard",
     element: (
-      <ProtectedRoute>
+      //<ProtectedRoute>
         <Layout>
           <DashboardPage />
         </Layout>
-      </ProtectedRoute>
+      //</ProtectedRoute>
     ),
   },
 ]);

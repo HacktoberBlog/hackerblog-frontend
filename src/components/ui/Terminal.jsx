@@ -67,7 +67,7 @@ function Terminal() {
             </div>
             <div className="flex items-center gap-2 ml-4 text-slate-400">
               <FiTerminal size={16} />
-              <span className="text-sm font-mono">hacktoberfest-2025</span>
+              <span className="font-google-code text-sm">hacktoberfest-2025</span>
             </div>
           </div>
 
@@ -75,8 +75,8 @@ function Terminal() {
           <div className="p-6 sm:p-8 md:p-10 font-mono">
             {/* first command */}
             <div ref={cmd1Ref} className="mb-6">
-              <span className="text-[rgb(0,255,0)]">$</span>
-              <span className="text-[rgb(0,170,255)] ml-2">
+              <span className="font-google-code text-[rgb(0,255,0)]">$</span>
+              <span className="font-google-code text-[rgb(0,170,255)] ml-2">
                 {cmd1InView && (
                   <Typewriter
                     words={["cat hacktoberfest-info.txt"]}
@@ -92,7 +92,7 @@ function Terminal() {
             <div ref={headerRef}>
               {headerInView && (
                 <>
-                  <h2 className="text-2xl font-bold text-[rgb(0,255,0)] mb-4">
+                  <h2 className="font-google-code text-2xl font-bold text-[rgb(0,255,0)] mb-4">
                     <Typewriter
                       words={["Hacktoberfest 2025 Project"]}
                       typeSpeed={70}
@@ -100,7 +100,7 @@ function Terminal() {
                       cursorStyle="|"
                     />
                   </h2>
-                  <p className="text-slate-300 mb-8 text-sm sm:text-base">
+                  <p className="font-google-code text-slate-300 mb-8 text-sm sm:text-base">
                     <Typewriter
                       words={[
                         "HackerBlog is proudly participating in Hacktoberfest 2025!",
@@ -116,8 +116,8 @@ function Terminal() {
 
             {/* second command */}
             <div ref={cmd2Ref} className="mb-6">
-              <span className="text-[rgb(0,255,0)]">$</span>
-              <span className="text-[rgb(0,170,255)] ml-2">
+              <span className="font-google-code text-[rgb(0,255,0)]">$</span>
+              <span className="font-google-code text-[rgb(0,170,255)] ml-2">
                 {cmd2InView && (
                   <Typewriter
                     words={["ls -la contribution-opportunities/"]}
@@ -144,10 +144,10 @@ function Terminal() {
                   <div className="text-[rgb(0,255,0)] mb-2 text-2xl">
                     {area.icon}
                   </div>
-                  <h4 className="font-bold text-[rgb(0,255,0)] mb-2 text-sm sm:text-base">
+                  <h4 className="font-google-code font-bold text-[rgb(0,255,0)] mb-2 text-sm sm:text-base">
                     {area.title}
                   </h4>
-                  <p className="text-slate-400 text-xs sm:text-sm">
+                  <p className="font-google-code text-slate-400 text-xs sm:text-sm">
                     {area.description}
                   </p>
                 </motion.div>
@@ -156,8 +156,8 @@ function Terminal() {
 
             {/* third command */}
             <div ref={cmd3Ref} className="mb-6">
-              <span className="text-[rgb(0,255,0)]">$</span>
-              <span className="text-[rgb(0,170,255)] ml-2">
+              <span className="font-google-code text-[rgb(0,255,0)]">$</span>
+              <span className="font-google-code text-[rgb(0,170,255)] ml-2">
                 {cmd3InView && (
                   <Typewriter
                     words={["open github-repositories"]}
@@ -179,7 +179,7 @@ function Terminal() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="flex items-center gap-2 px-6 py-3 bg-slate-900 text-[rgb(0,255,0)] hover:bg-[rgb(0,255,0)] hover:text-black border-2 border-[rgb(0,255,0)] rounded-lg font-bold transition-all text-sm sm:text-base"
+                className="font-google-code flex items-center gap-2 px-6 py-3 bg-slate-900 text-[rgb(0,255,0)] hover:bg-[rgb(0,255,0)] hover:text-black border-2 border-[rgb(0,255,0)] rounded-lg font-bold transition-all text-sm sm:text-base"
               >
                 <FiGithub size={20} />
                 Visit Our Organization
@@ -194,7 +194,7 @@ function Terminal() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.4 }}
-                className="flex items-center gap-2 px-6 py-3 bg-slate-900 text-[rgb(0,255,0)] hover:bg-[rgb(0,255,0)] hover:text-black border-2 border-[rgb(0,255,0)] rounded-lg font-bold transition-all text-sm sm:text-base"
+                className="font-google-code flex items-center gap-2 px-6 py-3 bg-slate-900 text-[rgb(0,255,0)] hover:bg-[rgb(0,255,0)] hover:text-black border-2 border-[rgb(0,255,0)] rounded-lg font-bold transition-all text-sm sm:text-base"
               >
                 <FiCode size={20} />
                 Backend Repository

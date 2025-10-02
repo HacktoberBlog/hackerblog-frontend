@@ -11,10 +11,10 @@ function About() {
             transition={{ duration: 0.6 }}
             className="mb-16"
           >
-            <h2 className="text-4xl font-bold mb-6 py-2 bg-white bg-clip-text text-transparent">
+            <h2 className="font-google-code text-4xl font-bold mb-6 py-2 bg-white bg-clip-text text-transparent">
               A Blog Platform That Actually Gets It
             </h2>
-            <p className="text-slate-300 max-w-4xl mx-auto leading-relaxed px-4">
+            <p className="font-google-code text-slate-300 max-w-4xl mx-auto leading-relaxed px-4">
               HackerBlog is lowkey the blog platform developers have been waiting for. Share your coding wins and fails, drop tutorials that actually make sense, spill the tea on programming concepts, and vibe with a community that gets your semicolon struggles. Whether you're documenting your coding journey or sharing that breakthrough moment when everything finally clicks - we're here for it! ✨
             </p>
           </motion.div>

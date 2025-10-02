@@ -13,8 +13,8 @@ const InfoCard = ({ icon, title, description, index }) => {
       <div className="text-[#a0a0ff] mb-4 text-4xl flex justify-center">
         {icon}
       </div>
-      <h3 className="text-xl font-bold text-white mb-2 text-center">{title}</h3>
-      <p className="text-slate-400 text-sm leading-relaxed text-center">{description}</p>
+      <h3 className="font-google-code text-xl font-bold text-white mb-2 text-center">{title}</h3>
+      <p className="font-google-code text-slate-400 text-sm leading-relaxed text-center">{description}</p>
     </motion.div>
   );
 };
