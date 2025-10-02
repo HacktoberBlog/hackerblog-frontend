@@ -32,13 +32,13 @@ function Hero() {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
       {/* top animation */}
-      <HeroAnimation className="absolute top-[10%] right-[5%]" />
+      <HeroAnimation className="absolute top-[5%] right-[2%] sm:top-[8%] sm:right-[4%] lg:top-[10%] lg:right-[5%] scale-50 sm:scale-75 lg:scale-100" />
 
       {/* bottom animation */}
       <HeroAnimation
-        className="absolute bottom-[10%] left-[5%]"
+        className="absolute bottom-[5%] left-[2%] sm:bottom-[8%] sm:left-[4%] lg:bottom-[10%] lg:left-[5%] scale-50 sm:scale-75 lg:scale-100"
         style={{ transform: 'rotate(180deg)' }}
       />
 
@@ -67,11 +67,11 @@ function Hero() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="relative z-10 max-w-6xl mx-auto text-center"
+        className="relative z-10 w-full max-w-6xl mx-auto text-center"
       >
-        <motion.div variants={itemVariants} className="mb-6">
+        <motion.div variants={itemVariants} className="mb-4 sm:mb-6">
           <motion.h1
-            className="font-press-start text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-4 py-4 bg-white bg-clip-text text-transparent"
+            className="font-press-start text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-3 sm:mb-4 py-3 sm:py-4 bg-white bg-clip-text text-transparent leading-tight px-2"
             animate={{ backgroundPosition: ["0%", "100%", "0%"] }}
             transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
             style={{ backgroundSize: "200% auto" }}
@@ -82,7 +82,7 @@ function Hero() {
 
         <motion.p
           variants={itemVariants}
-          className="font-google-code text-lg sm:text-xl md:text-2xl text-slate-300 mb-8 px-4 max-w-3xl mx-auto"
+          className="font-google-code text-base sm:text-lg md:text-xl lg:text-2xl text-slate-300 mb-6 sm:mb-8 px-4 sm:px-6 max-w-3xl mx-auto leading-relaxed"
         >
           Where developers share stories, insights, and code - no cap! 🔥
         </motion.p>
@@ -90,12 +90,12 @@ function Hero() {
         {!userProfile ? (
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4 sm:px-6"
           >
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="font-google-code w-full sm:w-auto px-8 py-4 bg-[rgb(160,160,255)] text-[rgb(28,28,64)] rounded-lg font-bold text-lg shadow-lg transition-all"
+              className="font-google-code w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-[rgb(160,160,255)] text-[rgb(28,28,64)] rounded-lg font-bold text-base sm:text-lg shadow-lg transition-all"
               onClick={()=>handleRedirect("register")}
             >
               Get Started
@@ -103,22 +103,22 @@ function Hero() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="font-google-code w-full sm:w-auto px-8 py-4 bg-slate-800 border-2 border-slate-300 rounded-lg font-bold text-lg hover:bg-slate-700 transition-all"
+              className="font-google-code w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-slate-800 border-2 border-slate-300 rounded-lg font-bold text-base sm:text-lg hover:bg-slate-700 transition-all"
               onClick={()=>handleRedirect("login")}
             >
               Sign In
             </motion.button>
           </motion.div>
         ) : (
-          <motion.div variants={itemVariants} className="space-y-4">
-            <p className="font-google-code text-xl text-slate-300">
+          <motion.div variants={itemVariants} className="space-y-4 px-4 sm:px-6">
+            <p className="font-google-code text-lg sm:text-xl text-slate-300">
               Welcome back, {userProfile.name || "Developer"}! Ready to drop
               some fire content? 🚀
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="font-google-code px-8 py-4 bg-[rgb(160,160,255)] text-[rgb(28,28,64)] rounded-lg font-bold text-lg shadow-lg"
+              className="font-google-code px-6 sm:px-8 py-3 sm:py-4 bg-[rgb(160,160,255)] text-[rgb(28,28,64)] rounded-lg font-bold text-base sm:text-lg shadow-lg"
               onClick={()=>handleRedirect("dashboard")}
             >
               Go to Dashboard
@@ -126,11 +126,11 @@ function Hero() {
           </motion.div>
         )}
 
-        <motion.div variants={itemVariants} className="mt-16 flex justify-center">
+        <motion.div variants={itemVariants} className="mt-12 sm:mt-16 flex justify-center">
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="text-slate-300 text-4xl"
+            className="text-slate-300 text-3xl sm:text-4xl"
           >
             ↓
           </motion.div>
