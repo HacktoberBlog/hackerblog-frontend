@@ -141,8 +141,8 @@ We welcome contributors of all skill levels! HackerBlog is participating in **Ha
    - `fix/bug-description` → Bug fixes
    - `docs/documentation-update` → Documentation updates
 3. **Make your changes** following coding standards
-4. **Commit your changes**: `git commit -m 'type: description'`
-5. **Push to your fork**: `git push origin your-branch-name`
+4. **Commit your changes**: `git commit -m '<type>: <description>'`
+5. **Push to your fork**: `git push origin <your-branch-name>`
 6. **Open a Pull Request**
 
 ### 🏷 Issue Labels
