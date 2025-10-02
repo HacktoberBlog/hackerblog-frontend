@@ -1,0 +1,53 @@
+/* styles.css */
+.card {
+  width: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  background: white;
+  text-align: center;
+  padding: 15px;
+  margin:20px;
+  transition: transform 0.2s;
+
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.card h2 {
+  font-size: 1.3rem;
+  margin: 10px 0;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.card button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.card button:hover {
+  background: #0056b3;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
