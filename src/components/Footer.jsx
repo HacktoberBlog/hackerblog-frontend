@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import {
   FaGithub,
   FaReact,
@@ -9,10 +10,81 @@ import {
   FaHeart,
   FaCode,
   FaLeaf,
+  FaEnvelope,
 } from "react-icons/fa";
+import Toast from "./ui/Toast";
 import "./Footer.css";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [toast, setToast] = useState({
+    isVisible: false,
+    message: "",
+    type: "info"
+  });
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const handleNewsletterSubmit = async (e) => {
+    e.preventDefault();
+    
+    if (!email.trim()) {
+      setToast({
+        isVisible: true,
+        message: "❌ Please enter your email address.",
+        type: "error"
+      });
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      setToast({
+        isVisible: true,
+        message: "❌ Please enter a valid email address.",
+        type: "error"
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      // Simulate API call - replace with actual backend integration
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // Here you would typically make an API call to your backend
+      // const response = await fetch('/api/newsletter/subscribe', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify({ email })
+      // });
+      
+      setToast({
+        isVisible: true,
+        message: "✅ You have successfully subscribed to our newsletter!",
+        type: "success"
+      });
+      
+      setEmail(""); // Clear the form
+    } catch (error) {
+      setToast({
+        isVisible: true,
+        message: "❌ Something went wrong. Please try again later.",
+        type: "error"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const closeToast = () => {
+    setToast(prev => ({ ...prev, isVisible: false }));
+  };
+
   return (
     <footer className="footer font-google-code">
       <div className="footer-container">
@@ -29,6 +101,38 @@ const Footer = () => {
             <p className="footer-description">
               Where developers share stories, insights, and code - no cap! 🔥
             </p>
+            
+            {/* Newsletter Subscription */}
+            <div className="newsletter-section">
+              <h4 className="newsletter-title">
+                <FaEnvelope className="newsletter-icon" />
+                Stay Updated
+              </h4>
+              <p className="newsletter-description">
+                Get the latest developer stories and insights delivered to your inbox.
+              </p>
+              <form onSubmit={handleNewsletterSubmit} className="newsletter-form">
+                <div className="newsletter-input-group">
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Enter your email"
+                    className="newsletter-input"
+                    disabled={isSubmitting}
+                    required
+                  />
+                  <button
+                    type="submit"
+                    className="newsletter-button"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? "Subscribing..." : "Subscribe"}
+                  </button>
+                </div>
+              </form>
+            </div>
+            
             <div className="footer-social">
               <a
                 href="https://github.com/HacktoberBlog"
@@ -197,6 +301,14 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      
+      {/* Toast Notification */}
+      <Toast
+        message={toast.message}
+        type={toast.type}
+        isVisible={toast.isVisible}
+        onClose={closeToast}
+      />
     </footer>
   );
 };
