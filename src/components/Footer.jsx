@@ -13,6 +13,67 @@ import {
 import "./Footer.css";
 
 const Footer = () => {
+  const footerArray = [
+    {
+      title: "Platform",
+      links: [
+        { title: "About", link: "" },
+        { title: "Features", link: "" },
+        { title: "Blog", link: "" },
+      ],
+    },
+    {
+      title: "Community",
+      links: [
+        { title: "Discussions", link: "https://github.com/HacktoberBlog/hackerblog-frontend/discussions" },
+        { title: "Issues", link: "https://github.com/HacktoberBlog/hackerblog-frontend/issues" },
+        { title: "Contributing", link: "https://github.com/HacktoberBlog/hackerblog-frontend/blob/main/CONTRIBUTING.md" },
+        { title: "Hacktoberfest", link: "https://hacktoberfest.com" },
+      ],
+    },
+    {
+      title: "Resources",
+      links: [
+        { title: "Documentation", link: "https://github.com/HacktoberBlog/hackerblog-frontend/blob/main/README.md" },
+        { title: "Help Center", link: "" },
+        { title: "Status", link: "" },
+        { title: "API", link: "" },
+      ],
+    },
+    {
+      title: "Legal",
+      links: [
+        { title: "Privacy Policy", link: "" },
+        { title: "Terms of Service", link: "" },
+        { title: "Code of Conduct", link: "https://github.com/HacktoberBlog/hackerblog-frontend/blob/main/CODE_OF_CONDUCT.md" },
+        { title: "Cookie Policy", link: "" },
+      ],
+    },
+  ];
+
+  const socialsArray = [
+    {
+      title: "Github",
+      link: "https://github.com/HacktoberBlog",
+      icon: <FaGithub />,
+    },
+    {
+      title: "Discord",
+      link: "https://discord.gg/hackerblog",
+      icon: <FaDiscord />,
+    },
+    {
+      title: "LinkedIn",
+      link: "https://linkedin.com/company/hackerblog",
+      icon: <FaLinkedin />,
+    },
+    {
+      title: "Twitter",
+      link: "https://twitter.com/hackerblog",
+      icon: <FaTwitter />,
+    },
+  ];
+
   return (
     <footer className="footer font-google-code">
       <div className="footer-container">
@@ -30,143 +91,37 @@ const Footer = () => {
               Where developers share stories, insights, and code - no cap! 🔥
             </p>
             <div className="footer-social">
-              <a
-                href="https://github.com/HacktoberBlog"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-link"
-                aria-label="GitHub"
-              >
-                <FaGithub />
-              </a>
-              <a
-                href="https://twitter.com/hackerblog"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-link"
-                aria-label="Twitter"
-              >
-                <FaTwitter />
-              </a>
-              <a
-                href="https://linkedin.com/company/hackerblog"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-link"
-                aria-label="LinkedIn"
-              >
-                <FaLinkedin />
-              </a>
-              <a
-                href="https://discord.gg/hackerblog"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-link"
-                aria-label="Discord"
-              >
-                <FaDiscord />
-              </a>
+              {socialsArray.map((social) => (
+                <a
+                  href={social.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-link"
+                  aria-label={social.title}
+                >
+                  {social.icon}
+                </a>
+              ))}
             </div>
           </div>
 
-          <div className="footer-section">
-            <h4 className="footer-section-title">Platform</h4>
+          {footerArray.map((array)=>(
+            <div className="footer-section">
+            <h4 className="footer-section-title">{array.title}</h4>
             <div className="footer-links">
-              <Link to="/about" className="footer-link">
-                About
-              </Link>
-              <Link to="/features" className="footer-link">
-                Features
-              </Link>
-              <Link to="/blog" className="footer-link">
-                Blog
-              </Link>
+              {array.links.map((subArr)=>(
+                <a
+                href={subArr.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-link"
+              >
+                {subArr.title}
+              </a>
+              ))}
             </div>
           </div>
-
-          <div className="footer-section">
-            <h4 className="footer-section-title">Community</h4>
-            <div className="footer-links">
-              <a
-                href="https://github.com/HacktoberBlog/hackerblog-frontend/discussions"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="footer-link"
-              >
-                Discussions
-              </a>
-              <a
-                href="https://github.com/HacktoberBlog/hackerblog-frontend/issues"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="footer-link"
-              >
-                Issues
-              </a>
-              <a
-                href="https://github.com/HacktoberBlog/hackerblog-frontend/blob/main/CONTRIBUTING.md"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="footer-link"
-              >
-                Contributing
-              </a>
-              <a
-                href="https://hacktoberfest.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="footer-link"
-              >
-                Hacktoberfest
-              </a>
-            </div>
-          </div>
-
-          <div className="footer-section">
-            <h4 className="footer-section-title">Resources</h4>
-            <div className="footer-links">
-              <a
-                href="https://github.com/HacktoberBlog/hackerblog-frontend/blob/main/README.md"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="footer-link"
-              >
-                Documentation
-              </a>
-              <Link to="/help" className="footer-link">
-                Help Center
-              </Link>
-              <Link to="/status" className="footer-link">
-                Status
-              </Link>
-              <Link to="/api" className="footer-link">
-                API
-              </Link>
-            </div>
-          </div>
-
-          <div className="footer-section">
-            <h4 className="footer-section-title">Legal</h4>
-            <div className="footer-links">
-              <Link to="/privacy" className="footer-link">
-                Privacy Policy
-              </Link>
-              <Link to="/terms" className="footer-link">
-                Terms of Service
-              </Link>
-              <a
-                href="https://github.com/HacktoberBlog/hackerblog-frontend/blob/main/CODE_OF_CONDUCT.md"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="footer-link"
-              >
-                Code of Conduct
-              </a>
-              <Link to="/cookies" className="footer-link">
-                Cookie Policy
-              </Link>
-            </div>
-          </div>
+          ))}
         </div>
 
         <div className="footer-bottom">
