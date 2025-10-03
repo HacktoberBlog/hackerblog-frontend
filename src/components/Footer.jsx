@@ -109,7 +109,7 @@ const Footer = () => {
             {/* brand section with social links */}
             <div className="flex flex-col max-w-md mb-8 lg:mb-0 lg:float-left lg:w-2/5 lg:pr-8">
               <h3
-                className="flex items-center gap-2 text-2xl font-semibold mb-4"
+                className="font-press-start flex items-center gap-2 text-2xl font-semibold mb-4"
                 style={{ color: "rgb(160, 160, 255)" }}
               >
                 <FaCode
