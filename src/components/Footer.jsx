@@ -178,6 +178,7 @@ const Footer = () => {
                 </div>
               ))}
             </div>
+            <div className="clear-both"></div>
           </div>
 
           {/* bottom text */}
@@ -198,6 +199,7 @@ const Footer = () => {
               <div className="flex gap-3 flex-wrap justify-center">
                 {tagArray.map((item) => (
                   <span
+                    key={item.title}
                     className="flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium"
                     style={{
                       backgroundColor: "rgba(160, 160, 255, 0.1)",
