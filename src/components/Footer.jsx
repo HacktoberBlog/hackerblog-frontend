@@ -3,13 +3,13 @@ import {
   FaGithub,
   FaReact,
   FaServer,
-  FaTwitter,
   FaLinkedin,
   FaDiscord,
   FaHeart,
   FaCode,
   FaLeaf,
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import "./Footer.css";
 
 const Footer = () => {
@@ -44,9 +44,9 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link"
-                aria-label="Twitter"
+                aria-label="X (Twitter)"
               >
-                <FaTwitter />
+                <FaXTwitter />
               </a>
               <a
                 href="https://linkedin.com/company/hackerblog"
