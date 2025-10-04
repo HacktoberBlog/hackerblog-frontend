@@ -2,7 +2,6 @@ import {
   FaGithub,
   FaReact,
   FaServer,
-  FaTwitter,
   FaLinkedin,
   FaDiscord,
   FaHeart,
