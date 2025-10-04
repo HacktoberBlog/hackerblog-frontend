@@ -7,3 +7,26 @@
   --font-google-code: "Google Sans Code", monospace;
   --font-press-start: "Press Start 2P", cursive;
 }
+
+/* ===== Hide scrollbars globally but keep scroll functional ===== */
+::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* ===== If you only want to hide scrollbars for a specific container ===== */
+/* Example usage: <div class="scroll-container"> ... </div> */
+
+.scroll-container {
+  overflow: auto; /* or scroll */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}

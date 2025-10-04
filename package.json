@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@studio-freight/lenis": "^1.0.42",
     "@tailwindcss/vite": "^4.1.13",
     "axios": "^1.12.2",
     "framer-motion": "^12.23.22",
