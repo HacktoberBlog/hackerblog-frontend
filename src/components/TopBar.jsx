@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom";
 import { useMyContext } from "../context/MyContext";
+import { useState } from "react";
 import "./TopBar.css";
 
 const TopBar = () => {
   const { userProfile, clearUserProfile } = useMyContext();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const handleLogout = () => {
     clearUserProfile();
+    setMenuOpen(false); // close menu after logout
     // Add any additional logout logic here if needed
   };
 
@@ -19,7 +22,11 @@ const TopBar = () => {
           </Link>
         </div>
 
-        <nav className="topbar-nav">
+        <button className="menu-toggle" onClick={() => setMenuOpen((prev) => !prev)}>
+          ☰
+        </button>
+
+        <nav className={`topbar-nav ${menuOpen ? "open" : ""}`}>
           {userProfile ? (
             <div className="nav-user">
               <span className="user-welcome font-google-code">
@@ -34,10 +41,10 @@ const TopBar = () => {
             </div>
           ) : (
             <div className="nav-auth">
-              <Link to="/login" className="nav-button login-button font-google-code">
+              <Link to="/login" className="nav-button login-button font-google-code" onClick={() => setMenuOpen(false)}>
                 LOGIN
               </Link>
-              <Link to="/register" className="nav-button register-button font-google-code">
+              <Link to="/register" className="nav-button register-button font-google-code" onClick={() => setMenuOpen(false)}>
                 SIGN UP
               </Link>
             </div>
