@@ -18,8 +18,12 @@ import {
 } from "react-icons/fi";
 import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const FeaturesPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const navigate = useNavigate();
 
   const coreFeatures = [
@@ -417,7 +421,7 @@ const FeaturesPage = () => {
                 onClick={() => navigate("/register")}
                 className="font-google-code px-8 py-4 bg-[rgb(160,160,255)] text-[rgb(28,28,64)] rounded-lg font-bold text-lg shadow-lg transition-all"
               >
-                Create Free Account
+                Create An Account
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
