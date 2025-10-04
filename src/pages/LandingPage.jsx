@@ -3,6 +3,7 @@ import About from "../components/ui/About";
 import Terminal from "../components/ui/Terminal";
 import Community from "../components/ui/Community";
 import Footer from "../components/Footer";
+import Card from "../components/articles/Card";
 
 // modularized the code for readablity as requested in the issue
 const LandingPage = () => {
@@ -12,12 +13,14 @@ const LandingPage = () => {
       <Hero />
       {/* about section */}
       <About />
+      {/* articles section will be added here in future */}
+      <Card />
       {/* hacktoberfest terminal section */}
       <Terminal />
       {/* community section */}
       <Community />
       {/* future footer component will be added here */}
-      <Footer/>
+      <Footer />
     </div>
   );
 };
