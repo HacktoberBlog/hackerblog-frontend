@@ -64,40 +64,11 @@ HackerBlog is a developer-centric blogging platform designed for the modern codi
 4. **Open your browser**
    Navigate to `http://localhost:5173` (or the port shown in your terminal)
 
-    ## 🐳 Running HackerBlog Frontend with Docker Compose
-
-   You can run the HackerBlog frontend locally or inside Docker using **Docker Compose**.
-
-
-   ### **Prerequisites**
-
-   - [Docker](https://www.docker.com/get-started) installed
-
-
-1. **Clone the repository**
-
-```bash   
-git clone https://github.com/HacktoberBlog/hackerblog-frontend.git
-cd hackerblog-frontend
-```
-
-2. **Copy the environment Variables**
-
-```bash   
-cp .\.env.example .\.env
-```
-3. **Build and Start with Docker Compose**
-
-```bash   
-docker compose up
-````
-
 ### 🏗 Available Scripts
 
 | Command           | Description                              |
 | ----------------- | ---------------------------------------- |
 | `npm run dev`     | Start development server with hot reload |
-| `npm run dev:docker`     | Start development server with --host flag |
 | `npm run build`   | Build for production                     |
 | `npm run preview` | Preview production build locally         |
 | `npm run lint`    | Run ESLint code analysis                 |
@@ -164,7 +135,12 @@ We welcome contributors of all skill levels! HackerBlog is participating in **Ha
 
 ### 📋 How to Contribute
 
-Please read our [CONTRIBUTING.md](docs/en/CONTRIBUTING.md) for detailed guidelines on how to contribute effectively.
+1. **Fork the repository**
+2. **Create a feature branch**: `git checkout -b feature/amazing-feature`
+3. **Make your changes**: Follow our coding standards
+4. **Commit your changes**: `git commit -m 'Add amazing feature'`
+5. **Push to your fork**: `git push origin feature/amazing-feature`
+6. **Open a Pull Request**
 
 ### 🏷 Issue Labels
 

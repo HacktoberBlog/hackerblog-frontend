@@ -18,7 +18,7 @@ const TopBar = () => {
       <div className="topbar-container">
         <div className="topbar-brand">
           <Link to="/" className="brand-link">
-            <h1 className="brand-title website-title">HackerBlog</h1>
+            <h1 className="brand-title website-title font-press-start">HackerBlog</h1>
           </Link>
         </div>
 
@@ -29,22 +29,22 @@ const TopBar = () => {
         <nav className={`topbar-nav ${menuOpen ? "open" : ""}`}>
           {userProfile ? (
             <div className="nav-user">
-              <span className="user-welcome">
+              <span className="user-welcome font-google-code">
                 Welcome, {userProfile.name || "User"}!
               </span>
               <button
                 onClick={handleLogout}
-                className="nav-button logout-button"
+                className="nav-button logout-button font-google-code"
               >
                 Logout
               </button>
             </div>
           ) : (
             <div className="nav-auth">
-              <Link to="/login" className="nav-button login-button" onClick={() => setMenuOpen(false)}>
+              <Link to="/login" className="nav-button login-button font-google-code" onClick={() => setMenuOpen(false)}>
                 LOGIN
               </Link>
-              <Link to="/register" className="nav-button register-button" onClick={() => setMenuOpen(false)}>
+              <Link to="/register" className="nav-button register-button font-google-code" onClick={() => setMenuOpen(false)}>
                 SIGN UP
               </Link>
             </div>
