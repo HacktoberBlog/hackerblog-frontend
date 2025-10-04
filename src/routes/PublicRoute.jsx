@@ -1,9 +1,10 @@
 import { Navigate } from "react-router-dom";
-import { isAuthenticated } from "../api";
+import { useMyContext } from "../context/MyContext";
 
 function PublicRoute({ children }) {
-  if (isAuthenticated()) {
-    return <Navigate to="/" replace />;
+  const { isAuthenticated } = useMyContext();
+  if (isAuthenticated) {
+    return <Navigate to="/dashboard" replace />;
   }
 
   return children;
