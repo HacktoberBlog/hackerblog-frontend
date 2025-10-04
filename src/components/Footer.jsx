@@ -7,6 +7,7 @@ import {
   FaHeart,
   FaCode,
   FaLeaf,
+  FaTwitter
 } from "react-icons/fa";
 
 const Footer = () => {
