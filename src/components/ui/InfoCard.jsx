@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const InfoCard = ({ icon, title, description, index }) => {
   return (
@@ -8,14 +8,33 @@ const InfoCard = ({ icon, title, description, index }) => {
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       whileHover={{ y: -8, scale: 1.02 }}
-      className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 hover:border-[#a0a0ff] transition-all duration-300 shadow-lg hover:shadow-purple-500/20"
+      className="p-6 rounded-xl border transition-all duration-300 shadow-lg"
+      style={{
+        background: "var(--card-gradient)",
+        borderColor: "var(--card-border)",
+        color: "var(--text-color)",
+      }}
     >
-      <div className="text-[#a0a0ff] mb-4 text-4xl flex justify-center">
+      <div
+        className="mb-4 text-4xl flex justify-center"
+        style={{ color: "var(--brand-color)" }}
+      >
         {icon}
       </div>
-      <h3 className="font-google-code text-xl font-bold text-white mb-2 text-center">{title}</h3>
-      <p className="font-google-code text-slate-400 text-sm leading-relaxed text-center">{description}</p>
+      <h3
+        className="font-google-code text-xl font-bold mb-2 text-center"
+        style={{ color: "var(--text-color)" }}
+      >
+        {title}
+      </h3>
+      <p
+        className="font-google-code text-sm leading-relaxed text-center"
+        style={{ color: "var(--text-muted)" }}
+      >
+        {description}
+      </p>
     </motion.div>
   );
 };
+
 export default InfoCard;

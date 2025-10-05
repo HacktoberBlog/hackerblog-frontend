@@ -4,12 +4,7 @@
   align-items: center;
   justify-content: center;
   padding: 2rem 1rem;
-  background: linear-gradient(
-    135deg,
-    rgb(28, 28, 64) 0%,
-    rgb(20, 20, 48) 50%,
-    rgb(15, 15, 35) 100%
-  );
+  background: var(--bg-gradient);
 }
 
 .auth-container {
@@ -18,12 +13,13 @@
 }
 
 .auth-card {
-  background: linear-gradient(135deg, rgb(20, 20, 48) 0%, rgb(28, 28, 64) 100%);
+  background: var(--card-bg);
   border-radius: 16px;
   padding: 2.5rem;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3),
-    0 10px 10px -5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.3),
+              0 10px 10px -5px rgba(0,0,0,0.1);
   border: 1px solid rgba(160, 160, 255, 0.2);
+  transition: background 0.3s;
 }
 
 .auth-header {
@@ -34,13 +30,14 @@
 .auth-header h1 {
   font-size: 2rem;
   font-weight: bold;
-  color: #f9fafb;
+  color: var(--text-color);
   margin-bottom: 0.5rem;
 }
 
 .auth-header p {
-  color: #d1d5db;
+  color: var(--text-color);
   font-size: 1rem;
+  opacity: 0.7;
 }
 
 .auth-form {
@@ -57,7 +54,7 @@
 
 .form-label {
   font-weight: 500;
-  color: #f9fafb;
+  color: var(--text-color);
   font-size: 0.9rem;
 }
 
@@ -66,14 +63,14 @@
   border: 1px solid rgba(160, 160, 255, 0.3);
   border-radius: 8px;
   background-color: rgba(28, 28, 64, 0.5);
-  color: #f9fafb;
+  color: var(--text-color);
   font-size: 1rem;
   transition: all 0.3s ease;
 }
 
 .form-input:focus {
   outline: none;
-  border-color: rgb(160, 160, 255);
+  border-color: var(--brand-color);
   box-shadow: 0 0 0 3px rgba(160, 160, 255, 0.1);
   background-color: rgba(28, 28, 64, 0.7);
 }
@@ -84,7 +81,7 @@
 }
 
 .form-input.error {
-  border-color: #ef4444;
+  border-color: var(--danger-color);
   box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
 }
 
@@ -93,15 +90,15 @@
 }
 
 .error-message {
-  color: #f87171;
+  color: var(--danger-color);
   font-size: 0.875rem;
   margin-top: 0.25rem;
 }
 
 .auth-button {
   padding: 0.875rem 1rem;
-  background-color: rgb(160, 160, 255);
-  color: rgb(28, 28, 64);
+  background-color: var(--brand-color);
+  color: var(--bg-color);
   border: none;
   border-radius: 8px;
   font-weight: 600;
@@ -113,7 +110,7 @@
 
 .auth-button:hover:not(:disabled) {
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(160, 160, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(160,160,255,0.3);
   background-color: rgba(160, 160, 255, 0.9);
 }
 
@@ -128,16 +125,17 @@
   text-align: center;
   margin-top: 2rem;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(160, 160, 255, 0.2);
+  border-top: 1px solid rgba(160,160,255,0.2);
 }
 
 .auth-footer p {
-  color: #d1d5db;
+  color: var(--text-color);
   font-size: 0.9rem;
+  opacity: 0.7;
 }
 
 .auth-link {
-  color: rgb(160, 160, 255);
+  color: var(--brand-color);
   font-weight: 500;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -149,25 +147,11 @@
 
 /* Responsive Design */
 @media (max-width: 480px) {
-  .auth-page {
-    padding: 1rem;
-  }
-
-  .auth-card {
-    padding: 2rem 1.5rem;
-  }
-
-  .auth-header h1 {
-    font-size: 1.75rem;
-  }
-
-  .form-input {
-    padding: 0.625rem 0.875rem;
-  }
-
-  .auth-button {
-    padding: 0.75rem 1rem;
-  }
+  .auth-page { padding: 1rem; }
+  .auth-card { padding: 2rem 1.5rem; }
+  .auth-header h1 { font-size: 1.75rem; }
+  .form-input { padding: 0.625rem 0.875rem; }
+  .auth-button { padding: 0.75rem 1rem; }
 }
 
 .password-wrapper {
@@ -176,9 +160,9 @@
 }
 
 .password-wrapper .form-input {
-  width: 100%;              /* same width as email */
-  padding-right: 40px;      /* space for the eye icon */
-  box-sizing: border-box;   /* keep consistent sizing */
+  width: 100%;
+  padding-right: 40px;
+  box-sizing: border-box;
 }
 
 .password-toggle {
@@ -189,7 +173,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  color: #555; /* same color as input text/icon */
+  color: #555;
   display: flex;
   align-items: center;
   justify-content: center;
