@@ -7,16 +7,16 @@
 
 ## 🌟 Índice
 
-- [Código de Conduta](#-código-de-conduta)  
-- [Primeiros Passos](#-primeiros-passos)  
-- [Maneiras de Contribuir](#-maneiras-de-contribuir)  
-- [Configuração de Desenvolvimento](#-configuração-de-desenvolvimento)  
-- [Processo de Contribuição](#-processo-de-contribuição)  
-- [Padrões de Código](#-padrões-de-código)  
-- [Diretrizes para Pull Request](#-diretrizes-para-pull-request)  
-- [Diretrizes para Issues](#-diretrizes-para-issues)  
-- [Diretrizes Hacktoberfest](#-diretrizes-hacktoberfest)  
-- [Reconhecimento](#-reconhecimento)  
+- [Código de Conduta](#-código-de-conduta)
+- [Primeiros Passos](#-primeiros-passos)
+- [Maneiras de Contribuir](#-maneiras-de-contribuir)
+- [Configuração de Desenvolvimento](#-configuração-de-desenvolvimento)
+- [Processo de Contribuição](#-processo-de-contribuição)
+- [Padrões de Código](#-padrões-de-código)
+- [Diretrizes para Pull Request](#-diretrizes-para-pull-request)
+- [Diretrizes para Issues](#-diretrizes-para-issues)
+- [Diretrizes Hacktoberfest](#-diretrizes-hacktoberfest)
+- [Reconhecimento](#-reconhecimento)
 
 ---
 
@@ -35,28 +35,28 @@ Por favor, leia e siga nosso [Código de Conduta](CODE_OF_CONDUCT.md).
 
 Antes de começar, certifique-se de ter:
 
-- **Node.js** (v18 ou superior) - [Baixe aqui](https://nodejs.org/)  
-- **Git** - [Baixe aqui](https://git-scm.com/)  
-- **Conta no GitHub** - [Cadastre-se aqui](https://github.com/join)  
-- **Editor de Código** (recomendamos VS Code)  
+- **Node.js** (v18 ou superior) - [Baixe aqui](https://nodejs.org/)
+- **Git** - [Baixe aqui](https://git-scm.com/)
+- **Conta no GitHub** - [Cadastre-se aqui](https://github.com/join)
+- **Editor de Código** (recomendamos VS Code)
 
 ### Início Rápido
 
-1. **Faça um fork do repositório** no GitHub  
-2. **Clone o seu fork** localmente:  
+1. **Faça um fork do repositório** no GitHub
+2. **Clone o seu fork** localmente:
    ```bash
    git clone https://github.com/SEU_USUARIO/hackerblog-frontend.git
    cd hackerblog-frontend
    ```
-3. **Instale as dependências**:  
+3. **Instale as dependências**:
    ```bash
    npm install
    ```
-4. **Inicie o servidor de desenvolvimento**:  
+4. **Inicie o servidor de desenvolvimento**:
    ```bash
    npm run dev
    ```
-5. **Abra** `http://localhost:5173` no navegador  
+5. **Abra** `http://localhost:5173` no navegador
 
 ---
 
@@ -65,46 +65,53 @@ Antes de começar, certifique-se de ter:
 Aceitamos todos os tipos de contribuição! Aqui estão algumas formas:
 
 ### 🔧 Desenvolvimento Frontend
-- Criar ou melhorar componentes React  
-- Melhorar CSS, animações e design responsivo  
-- Aumentar acessibilidade e usabilidade  
-- Otimizar desempenho (bundle, carregamento, renderização)  
+
+- Criar ou melhorar componentes React
+- Melhorar CSS, animações e design responsivo
+- Aumentar acessibilidade e usabilidade
+- Otimizar desempenho (bundle, carregamento, renderização)
 
 ### 🐛 Bugs e Testes
-- Reportar bugs com passos de reprodução  
-- Corrigir bugs e casos de borda  
-- Escrever testes (unitários, integração, E2E)  
-- Testes manuais em diferentes navegadores/dispositivos  
+
+- Reportar bugs com passos de reprodução
+- Corrigir bugs e casos de borda
+- Escrever testes (unitários, integração, E2E)
+- Testes manuais em diferentes navegadores/dispositivos
 
 ### 📚 Documentação
-- Melhorar README e guias  
-- Adicionar comentários em códigos complexos  
-- Documentar componentes, funções e utilitários  
-- Criar tutoriais para iniciantes  
+
+- Melhorar README e guias
+- Adicionar comentários em códigos complexos
+- Documentar componentes, funções e utilitários
+- Criar tutoriais para iniciantes
 
 ### 🎨 Design & UI/UX
-- Melhorar tema visual e animações  
-- Melhorar experiência mobile  
-- Garantir acessibilidade universal  
-- Criar/otimizar ícones e elementos visuais  
+
+- Melhorar tema visual e animações
+- Melhorar experiência mobile
+- Garantir acessibilidade universal
+- Criar/otimizar ícones e elementos visuais
 
 ### 🚀 Novas Funcionalidades
-- Painel de usuário  
-- Editor de blog (rich text)  
-- Sistema de busca  
-- Perfis de usuário personalizáveis  
+
+- Painel de usuário
+- Editor de blog (rich text)
+- Sistema de busca
+- Perfis de usuário personalizáveis
 
 ---
 
 ## 🛠 Configuração de Desenvolvimento
 
 ### Variáveis de Ambiente
-1. Crie o arquivo `.env`:  
+
+1. Crie o arquivo `.env`:
    ```bash
    cp .env.example .env
    ```
 
 ### Convenção de Branches
+
 ```bash
 git checkout -b feature/nome-da-feature
 git checkout -b fix/descricao-do-bug
@@ -112,6 +119,7 @@ git checkout -b docs/atualizacao-documentacao
 ```
 
 ### Fluxo de Desenvolvimento
+
 ```bash
 npm run dev       # iniciar servidor
 npm run lint      # rodar linter
@@ -124,33 +132,37 @@ npm run preview   # preview build
 ## 📝 Processo de Contribuição
 
 1. **Encontre uma Issue**  
-   Veja as [issues abertas](https://github.com/HacktoberBlog/hackerblog-frontend/issues)  
-   - `good-first-issue` → iniciantes  
-   - `hacktoberfest` → válido para Hacktoberfest  
-   - `help-wanted` → precisamos de ajuda  
-   - `frontend` → tarefas de frontend  
+   Veja as [issues abertas](https://github.com/HacktoberBlog/hackerblog-frontend/issues)
+
+   - `good-first-issue` → iniciantes
+   - `hacktoberfest` → válido para Hacktoberfest
+   - `help-wanted` → precisamos de ajuda
+   - `frontend` → tarefas de frontend
 
 2. **Reivindique a Issue**  
-   Comente:  
+   Comente:
+
    ```
    Gostaria de trabalhar nesta issue! 🙋‍♂️
    ```
 
-3. **Crie uma Branch e Trabalhe**  
+3. **Crie uma Branch e Trabalhe**
+
    ```bash
    git checkout main
    git pull origin main
    git checkout -b feature/nome-da-feature
    ```
 
-4. **Faça Commit e Push**  
+4. **Faça Commit e Push**
+
    ```bash
    git add .
    git commit -m "feat: adiciona nova funcionalidade"
    git push origin feature/nome-da-feature
    ```
 
-5. **Abra um Pull Request** no GitHub  
+5. **Abra um Pull Request** no GitHub
 
 ---
 
@@ -159,6 +171,7 @@ npm run preview   # preview build
 ### JavaScript/React
 
 ✅ Bom:
+
 ```javascript
 const MyComponent = ({ title }) => {
   const [count, setCount] = useState(0);
@@ -174,6 +187,7 @@ const MyComponent = ({ title }) => {
 ```
 
 ❌ Ruim:
+
 ```javascript
 function myComponent(props) {
   var count = 0;
@@ -186,32 +200,76 @@ function myComponent(props) {
 }
 ```
 
-### CSS
+### Diretrizes de CSS e Estilização
 
-✅ Bom:
+**Usamos Tailwind CSS para estilização neste projeto!** 🎨
+
+#### Melhores Práticas do Tailwind CSS
+
+```jsx
+// ✅ Bom - Use classes utilitárias do Tailwind
+const MyComponent = ({ title, isActive }) => {
+  return (
+    <div className="bg-gradient-to-br from-slate-800 to-slate-900 text-purple-300 p-8 rounded-lg">
+      <h1 className="text-2xl font-semibold mb-4 text-white">{title}</h1>
+      <button
+        className={`px-4 py-2 rounded transition-colors duration-200 ${
+          isActive
+            ? "bg-purple-600 hover:bg-purple-700 text-white"
+            : "bg-gray-600 hover:bg-gray-700 text-gray-200"
+        }`}
+      >
+        Clique em mim
+      </button>
+    </div>
+  );
+};
+
+// ❌ Ruim - Evite CSS customizado quando utilitários do Tailwind existem
+const BadComponent = () => {
+  return (
+    <div className="custom-card">
+      <h1 className="custom-title">Título</h1>
+    </div>
+  );
+};
+```
+
+#### CSS Customizado (quando necessário)
+
 ```css
+/* ✅ Bom - Use propriedades CSS customizadas e nomenclatura consistente */
 .landing-page {
-  background: linear-gradient(135deg, #1c1c40 0%, #141430 100%);
-  color: #a0a0ff;
+  background: linear-gradient(135deg, rgb(28, 28, 64) 0%, rgb(20, 20, 48) 100%);
+  color: rgb(160, 160, 255);
   padding: 2rem;
 }
+
 .landing-page__title {
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1rem;
 }
-```
 
-❌ Ruim:
-```css
+/* ❌ Ruim - Nomenclatura inconsistente e cores fixas */
 .page {
   background: #1c1c40;
   color: #a0a0ff;
 }
+
 .title1 {
   font-size: 32px;
 }
 ```
+
+#### Resumo das Diretrizes de Estilização
+
+- **Prefira utilitários do Tailwind** em vez de CSS customizado
+- **Use classes responsivas** (`sm:`, `md:`, `lg:`, `xl:`) para design mobile-first
+- **Mantenha consistência de cores** com nosso tema roxo/azul (`purple-300`, `slate-800`, etc.)
+- **Use combinações semânticas de classes** para padrões reutilizáveis
+- **Agrupe classes relacionadas** para melhor legibilidade
+- **Escreva CSS customizado apenas** quando utilitários do Tailwind forem insuficientes
 
 ### Commits (Conventional Commits)
 
@@ -229,6 +287,7 @@ test: adiciona testes de autenticação
 ## 🔄 Diretrizes de Pull Request
 
 **Título (exemplo):**
+
 ```
 feat: adiciona nova feature incrível
 fix: corrige bug crítico em auth
@@ -236,65 +295,81 @@ docs: atualiza guia de contribuição
 ```
 
 **Descrição do PR (template resumido):**
+
 ```markdown
 ## 🎯 Descrição
+
 Breve explicação do que foi feito.
 
 ## 🔗 Issue Relacionada
+
 Closes #123
 
 ## 🧪 Tipo de Mudança
+
 - [ ] Bug fix
 - [ ] Nova feature
 - [ ] Breaking change
 - [ ] Documentação
 
 ## ✅ Testes
+
 - [ ] Testado localmente
 - [ ] Testes adicionados
 - [ ] Todos os testes passaram
 ```
 
 Processo de review:
-1. Checks automáticos (lint, build)  
-2. Code review dos maintainers  
-3. Testes  
-4. Aprovação e merge  
+
+1. Checks automáticos (lint, build)
+2. Code review dos maintainers
+3. Testes
+4. Aprovação e merge
 
 ---
 
 ## 🐛 Diretrizes para Issues
 
 ### Bugs
+
 ```markdown
 ## 🐛 Descrição
+
 ...
 
 ## 🔄 Reproduzir
+
 1. Ir em '...'
 2. Clicar em '...'
 
 ## 🎯 Esperado
+
 ...
 
 ## 🖥 Ambiente
+
 - OS: Windows 11
 - Browser: Chrome 91
 - Node: 18.17.0
 ```
 
 ### Features
+
 ```markdown
 ## 🚀 Descrição
+
 ...
 
 ## 💡 Motivação
+
 ...
 
 ## 📋 Detalhes
+
 ...
 
 ## 🎨 Mockups
+
 ...
 ```
 
@@ -302,47 +377,49 @@ Processo de review:
 
 ## 🎃 Diretrizes Hacktoberfest
 
-- **Qualidade > Quantidade**  
-- Siga as [regras oficiais](https://hacktoberfest.com/participation/)  
-- Revisões podem levar 2-3 dias  
-- Responda ao feedback  
+- **Qualidade > Quantidade**
+- Siga as [regras oficiais](https://hacktoberfest.com/participation/)
+- Revisões podem levar 2-3 dias
+- Responda ao feedback
 
 ✅ Aceito: bugs corrigidos, novas features, docs relevantes, otimizações  
-❌ Não aceito: spam, PRs automáticos, mudanças cosméticas sem valor  
+❌ Não aceito: spam, PRs automáticos, mudanças cosméticas sem valor
 
 ---
 
 ## 🏆 Reconhecimento
 
-- Lista de contribuidores no README  
-- Créditos na página de contribuidores do GitHub  
-- Menções especiais em releases  
-- Hall da fama em docs/redes sociais  
+- Lista de contribuidores no README
+- Créditos na página de contribuidores do GitHub
+- Menções especiais em releases
+- Hall da fama em docs/redes sociais
 
 ---
 
 ## 📞 Ajuda
 
-- **Issues no GitHub** → bugs e features  
-- **Discussions** → dúvidas e ideias  
-- **Comentários em PRs** → revisões de código  
+- **Issues no GitHub** → bugs e features
+- **Discussions** → dúvidas e ideias
+- **Comentários em PRs** → revisões de código
 
 Tempo de resposta:
-- Issues: 2–3 dias  
-- PRs: 3–5 dias  
-- Bugs críticos: 24h  
+
+- Issues: 2–3 dias
+- PRs: 3–5 dias
+- Bugs críticos: 24h
 
 ---
 
 ## 🎉 Obrigado
 
-Obrigado por considerar contribuir com o HackerBlog! Cada contribuição, grande ou pequena, melhora o projeto para toda a comunidade.  
+Obrigado por considerar contribuir com o HackerBlog! Cada contribuição, grande ou pequena, melhora o projeto para toda a comunidade.
 
 **Dicas finais:**
-- Comece pequeno (`good-first-issue`)  
-- Pergunte quando tiver dúvidas  
-- Tenha paciência  
-- Se divirta 🚀  
+
+- Comece pequeno (`good-first-issue`)
+- Pergunte quando tiver dúvidas
+- Tenha paciência
+- Se divirta 🚀
 
 ---
 
@@ -354,6 +431,6 @@ _Feito com 💜 pela comunidade HackerBlog_
 
 [![GitHub Issues](https://img.shields.io/github/issues/HacktoberBlog/hackerblog-frontend?style=flat-square)](https://github.com/HacktoberBlog/hackerblog-frontend/issues)  
 [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/HacktoberBlog/hackerblog-frontend?style=flat-square)](https://github.com/HacktoberBlog/hackerblog-frontend/pulls)  
-[![Contributors](https://img.shields.io/github/contributors/HacktoberBlog/hackerblog-frontend?style=flat-square)](https://github.com/HacktoberBlog/hackerblog-frontend/graphs/contributors)  
+[![Contributors](https://img.shields.io/github/contributors/HacktoberBlog/hackerblog-frontend?style=flat-square)](https://github.com/HacktoberBlog/hackerblog-frontend/graphs/contributors)
 
 </div>
