@@ -60,7 +60,7 @@ We welcome all types of contributions! Here are some ways you can help:
 ### 🔧 Frontend Development
 
 - **React Components**: Build new UI components or improve existing ones
-- **Styling**: Enhance CSS, animations, and responsive design
+- **Styling**: Enhanced UI, improved responsiveness using tailwindcss or animations using framer motion
 - **User Experience**: Improve navigation, accessibility, and usability
 - **Performance**: Optimize bundle size, loading times, and rendering
 
@@ -220,10 +220,43 @@ function myComponent(props) {
 }
 ```
 
-### CSS Guidelines
+### 🎨 **CSS Guidelines**
 
+> ⚠️ We **strictly use TailwindCSS** for all styling — no other external CSS frameworks or raw css (unless asked or needed).  
+> The goal is to **ship fast**, **keep it consistent**, and **avoid redundancy** in code.
+```javascript
+---
+
+/* ✅ Good Practice  */
+
+/*Reduce Class Redundancy*/
+/*Use shared Tailwind utility classes or component-level wrappers to avoid repeating the same styles across multiple elements.*/
+const MyComponent = () => {
+  return (
+    <div className="common-tailwind-class">
+      <h1>{title}</h1>
+      <button>Count: {count}</button>
+    </div>
+  );
+};
+
+
+/* ❌ Bad  */
+
+/*Avoid applying the same Tailwind classes repeatedly to multiple child elements.*/
+/*This causes verbosity and makes future style updates harder.*/
+
+const MyComponent = () => {
+  return (
+    <div>
+      <h1 className="some-font">{title}</h1>
+      <button className="some-font">Count: {count}</button>
+    </div>
+  );
+};
+```
 ```css
-/* ✅ Good - Use CSS custom properties and consistent naming */
+/*Avoid using raw css until and unless you don't have other options */
 .landing-page {
   background: linear-gradient(135deg, rgb(28, 28, 64) 0%, rgb(20, 20, 48) 100%);
   color: rgb(160, 160, 255);
@@ -234,16 +267,6 @@ function myComponent(props) {
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1rem;
-}
-
-/* ❌ Bad - Inconsistent naming and hard-coded colors */
-.page {
-  background: #1c1c40;
-  color: #a0a0ff;
-}
-
-.title1 {
-  font-size: 32px;
 }
 ```
 
