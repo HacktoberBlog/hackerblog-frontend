@@ -23,14 +23,15 @@ HackerBlog é uma plataforma de blog centrada em desenvolvedores, projetada para
 
 ### 🛠 Stack Tecnológico
 
-| Tecnologia       | Propósito                      | Versão  |
-| ---------------- | ------------------------------ | ------- |
-| **React**        | Framework Frontend             | 19.1.1+ |
-| **Vite**         | Ferramenta de Build e Dev      | 7.1.6+  |
-| **React Router** | Roteamento do Lado do Cliente  | 7.9.3+  |
-| **React Icons**  | Biblioteca de Ícones           | 5.5.0+  |
-| **Axios**        | Cliente HTTP                   | 1.12.2+ |
-| **ESLint**       | Análise de Código              | 9.35.0+ |
+| Tecnologia       | Propósito                     | Versão  |
+| ---------------- | ----------------------------- | ------- |
+| **React**        | Framework Frontend            | 19.1.1+ |
+| **Vite**         | Ferramenta de Build e Dev     | 7.1.6+  |
+| **React Router** | Roteamento do Lado do Cliente | 7.9.3+  |
+| **React Icons**  | Biblioteca de Ícones          | 5.5.0+  |
+| **Axios**        | Cliente HTTP                  | 1.12.2+ |
+| **Tailwind CSS** | CSS Utilitário                | Latest  |
+| **ESLint**       | Análise de Código             | 9.35.0+ |
 
 ## 🚀 Começando
 
@@ -66,12 +67,12 @@ HackerBlog é uma plataforma de blog centrada em desenvolvedores, projetada para
 
 ### 🏗 Scripts Disponíveis
 
-| Comando           | Descrição                                    |
-| ----------------- | -------------------------------------------- |
+| Comando           | Descrição                                         |
+| ----------------- | ------------------------------------------------- |
 | `npm run dev`     | Inicia servidor de desenvolvimento com hot reload |
-| `npm run build`   | Compila para produção                        |
-| `npm run preview` | Visualiza a build de produção localmente     |
-| `npm run lint`    | Executa análise de código ESLint             |
+| `npm run build`   | Compila para produção                             |
+| `npm run preview` | Visualiza a build de produção localmente          |
+| `npm run lint`    | Executa análise de código ESLint                  |
 
 ## 🎨 Estrutura do Projeto
 
