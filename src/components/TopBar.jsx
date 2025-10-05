@@ -10,11 +10,18 @@ const TopBar = () => {
     // Add any additional logout logic here if needed
   };
 
+  const handleLogoClick = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <header className="topbar">
       <div className="topbar-container">
         <div className="topbar-brand">
-          <Link to="/" className="brand-link">
+          <Link to="/" className="brand-link" onClick={handleLogoClick}>
             <h1 className="brand-title website-title font-press-start">HackerBlog</h1>
           </Link>
         </div>

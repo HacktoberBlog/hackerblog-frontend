@@ -6,6 +6,7 @@ import RegisterPage from "./pages/RegisterPage";
 import ProtectedRoute from "./routes/ProtectedRoute";
 import PublicRoute from "./routes/PublicRoute";
 import FeaturesPage from "./pages/FeaturesPage";
+import AboutPage from "./pages/AboutPage";
 
 // Placeholder component for dashboard
 const DashboardPage = () => (
@@ -31,6 +32,14 @@ const routes = createBrowserRouter([
     element: (
       <Layout>
         <FeaturesPage />
+      </Layout>
+    ),
+  },
+  {
+    path: "/about",
+    element: (
+      <Layout>
+        <AboutPage />
       </Layout>
     ),
   },
