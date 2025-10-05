@@ -7,17 +7,18 @@ import {
   FaHeart,
   FaCode,
   FaLeaf,
-  FaTwitter
+  FaTwitter,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const footerArray = [
     {
       title: "Platform",
       links: [
-        { title: "About", link: "" },
-        { title: "Features", link: "" },
-        { title: "Blog", link: "" },
+        { title: "About", link: "/about", isInternal: true },
+        { title: "Features", link: "/features", isInternal: true },
+        { title: "Blog", link: "", isInternal: true },
       ],
     },
     {
@@ -26,16 +27,23 @@ const Footer = () => {
         {
           title: "Discussions",
           link: "https://github.com/HacktoberBlog/hackerblog-frontend/discussions",
+          isInternal: false,
         },
         {
           title: "Issues",
           link: "https://github.com/HacktoberBlog/hackerblog-frontend/issues",
+          isInternal: false,
         },
         {
           title: "Contributing",
           link: "https://github.com/HacktoberBlog/hackerblog-frontend/blob/main/CONTRIBUTING.md",
+          isInternal: false,
         },
-        { title: "Hacktoberfest", link: "https://hacktoberfest.com" },
+        {
+          title: "Hacktoberfest",
+          link: "https://hacktoberfest.com",
+          isInternal: false,
+        },
       ],
     },
     {
@@ -44,22 +52,24 @@ const Footer = () => {
         {
           title: "Documentation",
           link: "https://github.com/HacktoberBlog/hackerblog-frontend/blob/main/README.md",
+          isInternal: false,
         },
-        { title: "Help Center", link: "" },
-        { title: "Status", link: "" },
-        { title: "API", link: "" },
+        { title: "Help Center", link: "", isInternal: false },
+        { title: "Status", link: "", isInternal: false },
+        { title: "API", link: "", isInternal: false },
       ],
     },
     {
       title: "Legal",
       links: [
-        { title: "Privacy Policy", link: "" },
-        { title: "Terms of Service", link: "" },
+        { title: "Privacy Policy", link: "", isInternal: false },
+        { title: "Terms of Service", link: "", isInternal: false },
         {
           title: "Code of Conduct",
           link: "https://github.com/HacktoberBlog/hackerblog-frontend/blob/main/CODE_OF_CONDUCT.md",
+          isInternal: false,
         },
-        { title: "Cookie Policy", link: "" },
+        { title: "Cookie Policy", link: "", isInternal: false },
       ],
     },
   ];
@@ -163,17 +173,42 @@ const Footer = () => {
                     {array.title}
                   </h4>
                   <div className="flex flex-col gap-2">
-                    {array.links.map((subArr, subIndex) => (
-                      <a
-                        key={subIndex}
-                        href={subArr.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-400 text-sm transition-colors duration-300 py-1 hover:text-[rgb(160,160,255)]"
-                      >
-                        {subArr.title}
-                      </a>
-                    ))}
+                    {array.links.map((subArr, subIndex) => {
+                      if (!subArr.link) {
+                        return (
+                          <span
+                            key={subIndex}
+                            className="text-gray-500 text-sm py-1 cursor-not-allowed"
+                          >
+                            {subArr.title}
+                          </span>
+                        );
+                      }
+
+                      if (subArr.isInternal) {
+                        return (
+                          <Link
+                            key={subIndex}
+                            to={subArr.link}
+                            className="text-gray-400 text-sm transition-colors duration-300 py-1 hover:text-[rgb(160,160,255)]"
+                          >
+                            {subArr.title}
+                          </Link>
+                        );
+                      }
+
+                      return (
+                        <a
+                          key={subIndex}
+                          href={subArr.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-gray-400 text-sm transition-colors duration-300 py-1 hover:text-[rgb(160,160,255)]"
+                        >
+                          {subArr.title}
+                        </a>
+                      );
+                    })}
                   </div>
                 </div>
               ))}
