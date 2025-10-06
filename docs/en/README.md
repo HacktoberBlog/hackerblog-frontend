@@ -30,6 +30,7 @@ HackerBlog is a developer-centric blogging platform designed for the modern codi
 | **React Router** | Client-side Routing     | 7.9.3+  |
 | **React Icons**  | Icon Library            | 5.5.0+  |
 | **Axios**        | HTTP Client             | 1.12.2+ |
+| **Tailwind CSS** | Utility-First CSS       | Latest  |
 | **ESLint**       | Code Linting            | 9.35.0+ |
 
 ## 🚀 Getting Started
