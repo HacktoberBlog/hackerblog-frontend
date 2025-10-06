@@ -6,7 +6,7 @@ import routes from "./routes";
 function App() {
   return (
   <ThemeProvider>
-  <RouterProvider router={routes} />;
+  <RouterProvider router={routes} />
   </ThemeProvider>
   );
 }
