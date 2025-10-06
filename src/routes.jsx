@@ -7,16 +7,17 @@ import ProtectedRoute from "./routes/ProtectedRoute";
 import PublicRoute from "./routes/PublicRoute";
 import FeaturesPage from "./pages/FeaturesPage";
 import AboutPage from "./pages/AboutPage";
+import DashboardPage from "./pages/DashboardPage";
 
 // Placeholder component for dashboard
-const DashboardPage = () => (
+/*const DashboardPage = () => (
   <div style={{ padding: "2rem", textAlign: "center", color: "#f9fafb" }}>
     <h2>Dashboard</h2>
     <p>
       Welcome to your dashboard! User functionality will be implemented here.
     </p>
   </div>
-);
+);*/
 
 const routes = createBrowserRouter([
   {
