@@ -1,6 +1,6 @@
 .topbar {
-  background: linear-gradient(135deg, rgb(28, 28, 64) 0%, rgb(36, 36, 80) 100%);
-  color: white;
+  background: var(--bg-gradient);
+  color: var(--text-color);
   padding: 0 1rem;
   box-shadow: 0 4px 12px rgba(28, 28, 64, 0.3);
   position: sticky;
@@ -31,13 +31,13 @@
   margin: 0;
   font-size: 1.5rem;
   font-weight: 600;
-  color: rgb(160, 160, 255);
+  color: var(--brand-color);
   transition: color 0.3s ease;
   letter-spacing: -0.02em;
 }
 
 .brand-title:hover {
-  color: rgb(140, 140, 235);
+  color: var(--brand-hover-color);
 }
 
 .topbar-nav {
@@ -53,7 +53,7 @@
 }
 
 .user-welcome {
-  color: #e0e0e0;
+  color: var(--text-color);
   font-size: 0.9rem;
 }
 
@@ -77,37 +77,51 @@
 
 .login-button {
   background-color: transparent;
-  color: rgb(160, 160, 255);
-  border: 1px solid rgb(160, 160, 255);
+  color: var(--brand-color);
+  border: 1px solid var(--brand-color);
 }
 
 .login-button:hover {
-  background-color: rgb(160, 160, 255);
-  color: rgb(28, 28, 64);
+  background-color: var(--brand-color);
+  color: var(--bg-color);
 }
 
 .register-button {
-  background-color: rgb(160, 160, 255);
-  color: rgb(28, 28, 64);
+  background-color: var(--brand-color);
+  color: var(--bg-color);
 }
 
 .register-button:hover {
-  background-color: rgb(140, 140, 235);
+  background-color: var(--brand-hover-color);
   transform: translateY(-1px);
 }
 
 .logout-button {
-  background-color: #ff6b6b;
-  color: white;
-  border: 1px solid #ff6b6b;
+  background-color: var(--danger-color);
+  color: var(--bg-color);
+  border: 1px solid var(--danger-color);
 }
 
 .logout-button:hover {
-  background-color: #ff5252;
+  background-color: var(--danger-hover-color);
   transform: translateY(-1px);
 }
 
-/* Responsive design */
+.theme-toggle {
+  margin-left: 1rem;
+  background: transparent;
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.theme-toggle:hover {
+  background: var(--text-color);
+  color: var(--card-bg);
+}
+
 @media (max-width: 768px) {
   .topbar-container {
     padding: 0 0.5rem;

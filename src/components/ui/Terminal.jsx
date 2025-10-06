@@ -36,7 +36,6 @@ function Terminal() {
     },
   ];
 
-  // refs monitoring when the typing should start
   const cmd1Ref = useRef(null);
   const cmd1InView = useInView(cmd1Ref, { once: true });
 
@@ -50,22 +49,29 @@ function Terminal() {
   const cmd3InView = useInView(cmd3Ref, { once: true });
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
+    <section
+      className="py-20 px-4 sm:px-6 lg:px-8"
+      style={{ background: "var(--bg-gradient)", color: "var(--text-color)" }}
+    >
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-slate-950 rounded-2xl overflow-hidden shadow-2xl"
+          className="rounded-2xl overflow-hidden shadow-2xl"
+          style={{ background: "var(--card-bg)", border: "1px solid rgba(160,160,255,0.2)" }}
         >
           {/* terminal header block */}
-          <div className="bg-slate-800 px-4 py-3 flex items-center gap-2 border-b border-slate-700">
+          <div
+            className="px-4 py-3 flex items-center gap-2 border-b"
+            style={{ background: "var(--bg-gradient)", borderColor: "rgba(160,160,255,0.2)" }}
+          >
             <div className="flex gap-2">
               <div className="w-3 h-3 rounded-full bg-red-500" />
               <div className="w-3 h-3 rounded-full bg-yellow-500" />
               <div className="w-3 h-3 rounded-full bg-green-500" />
             </div>
-            <div className="flex items-center gap-2 ml-4 text-slate-400">
+            <div className="flex items-center gap-2 ml-4" style={{ color: "var(--text-color)" }}>
               <FiTerminal size={16} />
               <span className="font-google-code text-sm">hacktoberfest-2025</span>
             </div>
@@ -92,7 +98,7 @@ function Terminal() {
             <div ref={headerRef}>
               {headerInView && (
                 <>
-                  <h2 className="font-google-code text-2xl font-bold text-[rgb(0,255,0)] mb-4">
+                  <h2 className="font-google-code text-2xl font-bold mb-4" style={{ color: "var(--brand-color)" }}>
                     <Typewriter
                       words={["Hacktoberfest 2025 Project"]}
                       typeSpeed={70}
@@ -100,11 +106,9 @@ function Terminal() {
                       cursorStyle="|"
                     />
                   </h2>
-                  <p className="font-google-code text-slate-300 mb-8 text-sm sm:text-base">
+                  <p className="font-google-code mb-8 text-sm sm:text-base" style={{ color: "var(--text-color)" }}>
                     <Typewriter
-                      words={[
-                        "HackerBlog is proudly participating in Hacktoberfest 2025!",
-                      ]}
+                      words={["HackerBlog is proudly participating in Hacktoberfest 2025!"]}
                       typeSpeed={70}
                       cursor
                       cursorStyle="|"
@@ -139,15 +143,19 @@ function Terminal() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.2 }}
                   whileHover={{ scale: 1.02, x: 5 }}
-                  className="bg-slate-900 p-4 rounded-lg border border-slate-700 hover:border-[rgb(0,255,0)] transition-all"
+                  className="p-4 rounded-lg border transition-all"
+                  style={{
+                    background: "var(--card-bg)",
+                    borderColor: "rgba(160,160,255,0.2)",
+                  }}
                 >
-                  <div className="text-[rgb(0,255,0)] mb-2 text-2xl">
+                  <div className="mb-2 text-2xl" style={{ color: "var(--brand-color)" }}>
                     {area.icon}
                   </div>
-                  <h4 className="font-google-code font-bold text-[rgb(0,255,0)] mb-2 text-sm sm:text-base">
+                  <h4 className="font-google-code font-bold mb-2 text-sm sm:text-base" style={{ color: "var(--brand-color)" }}>
                     {area.title}
                   </h4>
-                  <p className="font-google-code text-slate-400 text-xs sm:text-sm">
+                  <p className="font-google-code text-xs sm:text-sm" style={{ color: "var(--text-color)" }}>
                     {area.description}
                   </p>
                 </motion.div>
@@ -179,7 +187,12 @@ function Terminal() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="font-google-code flex items-center gap-2 px-6 py-3 bg-slate-900 text-[rgb(0,255,0)] hover:bg-[rgb(0,255,0)] hover:text-black border-2 border-[rgb(0,255,0)] rounded-lg font-bold transition-all text-sm sm:text-base"
+                className="font-google-code flex items-center gap-2 px-6 py-3 rounded-lg font-bold text-sm sm:text-base transition-all"
+                style={{
+                  background: "var(--card-bg)",
+                  color: "var(--brand-color)",
+                  border: "2px solid var(--brand-color)",
+                }}
               >
                 <FiGithub size={20} />
                 Visit Our Organization
@@ -194,7 +207,12 @@ function Terminal() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.4 }}
-                className="font-google-code flex items-center gap-2 px-6 py-3 bg-slate-900 text-[rgb(0,255,0)] hover:bg-[rgb(0,255,0)] hover:text-black border-2 border-[rgb(0,255,0)] rounded-lg font-bold transition-all text-sm sm:text-base"
+                className="font-google-code flex items-center gap-2 px-6 py-3 rounded-lg font-bold text-sm sm:text-base transition-all"
+                style={{
+                  background: "var(--card-bg)",
+                  color: "var(--brand-color)",
+                  border: "2px solid var(--brand-color)",
+                }}
               >
                 <FiCode size={20} />
                 Backend Repository

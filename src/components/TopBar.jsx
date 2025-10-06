@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import { useMyContext } from "../context/MyContext";
+import { useTheme } from "../context/ThemeContext";
 import "./TopBar.css";
 
 const TopBar = () => {
   const { userProfile, clearUserProfile } = useMyContext();
+  const {lightMode, toggleTheme} = useTheme();
 
   const handleLogout = () => {
     clearUserProfile();
@@ -47,6 +49,11 @@ const TopBar = () => {
               <Link to="/register" className="nav-button register-button font-google-code">
                 SIGN UP
               </Link>
+              <button
+                onClick={toggleTheme}
+                className="nav-button theme-toggle font-google-code">
+                {lightMode ? "🌙 Dark" : "☀️ Light"}
+              </button>
             </div>
           )}
         </nav>

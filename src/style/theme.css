@@ -1,0 +1,23 @@
+:root {
+  --bg-gradient: linear-gradient(135deg, rgb(28,28,64) 0%, rgb(36,36,80) 100%);
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --brand-color: rgb(160,160,255);
+  --brand-hover-color: rgb(140,140,235);
+  --danger-color: #ff6b6b;
+  --danger-hover-color: #ff5252;
+  --card-bg: #1e1e1e;
+}
+
+.light {
+  --bg-gradient: linear-gradient(135deg, #c9c7f8 0%, #f3f2ff 100%);
+  --bg-color: #f5f5f5;
+  --text-color: #1a1a1a;
+  --brand-color: rgb(120,100,255);
+  --brand-hover-color: rgb(140,120,255);
+  --danger-color: #ff7b7b;
+  --danger-hover-color: #ff4d4d;
+  --card-bg: #ffffff;
+}
+
+

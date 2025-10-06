@@ -1,16 +1,12 @@
-import {useState} from "react";
+import { useState } from "react";
 import InfoCard from "./InfoCard";
 import { motion } from "framer-motion";
-import {
-  FiPenTool,
-  FiUsers,
-  FiSend,
-} from "react-icons/fi";
+import { FiPenTool, FiUsers, FiSend } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 
 function Community() {
-  const [userProfile] = useState(null); // user state, if they dont exist... no need to show start your journey CTA
-  const navigate=useNavigate();
+  const [userProfile] = useState(null);
+  const navigate = useNavigate();
 
   const infoArray = [
     {
@@ -32,8 +28,12 @@ function Community() {
         "Display your portfolio and get that validation you deserve from people who actually understand",
     },
   ];
+
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
+    <section
+      className="py-20 px-4 sm:px-6 lg:px-8"
+      style={{ background: "var(--bg-gradient)", color: "var(--text-color)" }}
+    >
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -41,12 +41,17 @@ function Community() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="font-google-code text-4xl py-2 font-bold mb-6 bg-white bg-clip-text text-transparent">
+          <h2
+            className="font-google-code text-4xl py-2 font-bold mb-6 bg-clip-text text-transparent"
+            style={{
+              backgroundImage: "linear-gradient(90deg, var(--brand-color), var(--brand-hover-color))",
+              backgroundSize: "200% auto",
+            }}
+          >
             Join Our Growing Community ✨
           </h2>
-          <p className="font-google-code text-slate-300 max-w-4xl mx-auto leading-relaxed">
-            Whether you're here to flex your latest project, learn from the
-            pros...
+          <p className="font-google-code max-w-4xl mx-auto leading-relaxed" style={{ color: "var(--text-color)" }}>
+            Whether you're here to flex your latest project, learn from the pros...
           </p>
         </motion.div>
 
@@ -69,14 +74,18 @@ function Community() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <p className="font-google-code text-xl text-slate-300 mb-6">
+            <p className="font-google-code text-xl mb-6" style={{ color: "var(--text-color)" }}>
               Ready to level up your developer game? Let's go! 🎮
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="font-google-code px-8 py-4 bg-[rgb(160,160,255)] text-[rgb(28,28,64)] rounded-lg font-bold text-lg shadow-lg transition-all"
-              onClick={()=>navigate("/register")}
+              className="font-google-code px-8 py-4 rounded-lg font-bold text-lg shadow-lg transition-all"
+              style={{
+                backgroundColor: "var(--brand-color)",
+                color: "var(--text-color)",
+              }}
+              onClick={() => navigate("/register")}
             >
               Start Your Journey
             </motion.button>
