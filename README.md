@@ -106,26 +106,37 @@ docker compose up
 
 ```
 src/
-├── components/          # Reusable UI components
-│   ├── TopBar.jsx      # Navigation header
-│   └── TopBar.css      # TopBar styling
-├── pages/              # Page components
-│   ├── LandingPage.jsx # Main landing page
-│   ├── LandingPage.css # Landing page styles
-│   ├── LoginPage.jsx   # User authentication
-│   ├── RegisterPage.jsx# User registration
-│   └── AuthPages.css   # Auth pages styling
-├── routes/             # Route protection
+├── components/                      # Reusable UI components
+│   ├── TopBar.jsx                   # Navigation header
+│   ├── TopBar.css                   # TopBar styling
+│   ├── Footer.jsx                   # Footer section
+│   ├── animations/                  # Animations present on site
+│   │     ├── HeroAnimation.jsx      # Animation related to hero section
+│   │     └── animation.css          # custom animation
+│   └── ui/                          # Animations present on site
+│        ├── About.jsx               # About ui component
+│        ├── Community.jsx           # Community ui component
+│        ├── Hero.jsx                # Hero ui component
+│        ├── InfoCard.jsx            # InfoCard ui component
+│        └── Terminal.jsx            # Terminal animation ui component
+│
+├── pages/                           # Page components
+│   ├── LandingPage.jsx              # Main landing page
+│   ├── AboutPage.jsx                # About page 
+│   ├── LoginPage.jsx                # User authentication
+│   ├── RegisterPage.jsx             # User registration
+│   └── AuthPages.css                # Auth pages styling
+├── routes/                          # Route protection
 │   ├── ProtectedRoute.jsx
 │   └── PublicRoute.jsx
-├── context/            # React Context
-│   └── MyContext.jsx   # Global state management
-├── api/                # API integration
-│   ├── api.config.js   # Axios configuration
+├── context/                         # React Context
+│   └── MyContext.jsx                # Global state management
+├── api/                             # API integration
+│   ├── api.config.js                # Axios configuration
 │   ├── api.intercepter.js
-│   └── auth/           # Authentication APIs
-├── utils/              # Utility functions
-└── assets/             # Static assets
+│   └── auth/                        # Authentication APIs
+├── utils/                           # Utility functions
+└── assets/                          # Static assets
 ```
 
 ## 🎭 Features Showcase
