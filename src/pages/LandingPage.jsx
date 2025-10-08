@@ -1,6 +1,6 @@
 import Hero from "../components/ui/Hero";
 import About from "../components/ui/About";
-import Terminal from "../components/ui/Terminal";
+import TerminalSection from "../components/ui/Terminal";
 import Community from "../components/ui/Community";
 import Footer from "../components/Footer";
 
@@ -13,7 +13,7 @@ const LandingPage = () => {
       {/* about section */}
       <About />
       {/* hacktoberfest terminal section */}
-      <Terminal />
+      <TerminalSection />
       {/* community section */}
       <Community />
       {/* future footer component will be added here */}
@@ -21,5 +21,5 @@ const LandingPage = () => {
     </div>
   );
 };
-
+ 
 export default LandingPage;
