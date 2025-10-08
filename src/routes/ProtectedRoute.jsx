@@ -1,8 +1,12 @@
 import { Navigate } from "react-router-dom";
-import { isAuthenticated } from "../api";
+import { useMyContext } from "../context/MyContext";
 
 function ProtectedRoute({ children }) {
-  if (!isAuthenticated()) {
+  const { userProfile, isAuthenticated } = useMyContext();
+
+  // Check if user is authenticated using context state
+  if (!userProfile || !isAuthenticated) {
+    console.log('ProtectedRoute - Redirecting to login');
     return <Navigate to="/login" replace />;
   }
 

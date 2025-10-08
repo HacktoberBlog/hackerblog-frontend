@@ -3,19 +3,22 @@ import api from "../api.intercepter";
 
 /**
  * Register function that creates a new user account
- * @param {string} firstName - User's first name
- * @param {string} lastName - User's last name
- * @param {string} email - User email
- * @param {string} password - User password
- * @returns {Promise} - Promise that resolves to the registration response
+ * @param {Object} userData - User registration data
+ * @param {string} userData.name - User's full name
+ * @param {string} userData.username - User's username
+ * @param {string} userData.email - User email
+ * @param {string} userData.password - User password
+ * @returns {Promise} - Promise that resolves to the registration response (timestamp)
  */
-export const registerAPI = async (firstName, lastName, email, password) => {
+export const registerAPI = async (userData) => {
     try {
+        const { name, username, email, password } = userData;
         const response = await api.post(endpoints.register, {
-            firstName,
-            lastName,
+            name,
+            username,
             email,
             password,
+            blogs: []
         });
         return response.data;
     } catch (error) {
