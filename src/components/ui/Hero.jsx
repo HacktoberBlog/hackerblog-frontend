@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import HeroAnimation from "../animations/HeroAnimation";
+import ScrollToTopButton from "../ScrollToTop";
 import { useNavigate } from "react-router-dom";
 
 function Hero() {
@@ -33,6 +34,9 @@ function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      {/* scroll to top button */}
+      <ScrollToTopButton />
+
       {/* top animation */}
       <HeroAnimation className="absolute top-[5%] right-[2%] sm:top-[8%] sm:right-[4%] lg:top-[10%] lg:right-[5%] scale-50 sm:scale-75 lg:scale-100" />
 

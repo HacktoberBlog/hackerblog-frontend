@@ -10,6 +10,7 @@ import {
   FiHeart,
 } from "react-icons/fi";
 import Footer from "../components/Footer";
+import ScrollToTopButton from "../components/ScrollToTop"
 
 //? Scroll to top on mount
 const AboutPage = () => {
@@ -63,6 +64,9 @@ const AboutPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[rgb(20,20,48)] via-[rgb(28,28,64)] to-[rgb(15,15,35)] text-white">
+      {/* Scroll to Top Button */}
+      <ScrollToTopButton />
+
       {/* Hero Section */}
       <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-15 text-center bg-gradient-to-b from-[rgba(160,160,255,0.1)] to-transparent">
         <motion.div
