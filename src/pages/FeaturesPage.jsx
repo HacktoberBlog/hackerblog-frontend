@@ -19,6 +19,7 @@ import {
 import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import ScrollToTopButton from "../components/ScrollToTop"
 
 const FeaturesPage = () => {
   useEffect(() => {
@@ -153,6 +154,8 @@ const FeaturesPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+      {/* Scroll to Top Button */}
+      <ScrollToTopButton />
       {/* Hero Section */}
       <section className="relative px-4 sm:px-6 lg:px-8 py-24 md:py-32 text-center overflow-hidden">
         {/* Background decoration */}
