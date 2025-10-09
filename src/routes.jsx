@@ -90,6 +90,22 @@ const routes = createBrowserRouter([
     ),
   },
   {
+    path: "/features",
+    element: (
+      <Layout>
+        <FeaturesPage />
+      </Layout>
+    ),
+  },
+  {
+    path: "/about",
+    element: (
+      <Layout>
+        <AboutPage />
+      </Layout>
+    ),
+  },
+  {
     path: "/login",
     element: (
       <SmoothScrollWrapper>

@@ -220,7 +220,42 @@ function myComponent(props) {
 }
 ```
 
-### CSS Guidelines
+### CSS & Styling Guidelines
+
+**We use Tailwind CSS for styling in this project!** 🎨
+
+#### Tailwind CSS Best Practices
+
+```jsx
+// ✅ Good - Use Tailwind utility classes
+const MyComponent = ({ title, isActive }) => {
+  return (
+    <div className="bg-gradient-to-br from-slate-800 to-slate-900 text-purple-300 p-8 rounded-lg">
+      <h1 className="text-2xl font-semibold mb-4 text-white">{title}</h1>
+      <button
+        className={`px-4 py-2 rounded transition-colors duration-200 ${
+          isActive
+            ? "bg-purple-600 hover:bg-purple-700 text-white"
+            : "bg-gray-600 hover:bg-gray-700 text-gray-200"
+        }`}
+      >
+        Click me
+      </button>
+    </div>
+  );
+};
+
+// ❌ Bad - Avoid custom CSS when Tailwind utilities exist
+const BadComponent = () => {
+  return (
+    <div className="custom-card">
+      <h1 className="custom-title">Title</h1>
+    </div>
+  );
+};
+```
+
+#### Custom CSS (when needed)
 
 ```css
 /* ✅ Good - Use CSS custom properties and consistent naming */
@@ -246,6 +281,15 @@ function myComponent(props) {
   font-size: 32px;
 }
 ```
+
+#### Styling Guidelines Summary
+
+- **Prefer Tailwind utilities** over custom CSS
+- **Use responsive classes** (`sm:`, `md:`, `lg:`, `xl:`) for mobile-first design
+- **Maintain color consistency** with our purple/blue theme (`purple-300`, `slate-800`, etc.)
+- **Use semantic class combinations** for reusable patterns
+- **Group related classes** for better readability
+- **Only write custom CSS** when Tailwind utilities are insufficient
 
 ### Commit Message Format
 
